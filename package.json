@@ -1,9 +1,10 @@
 {
   "name": "@velocityboy/hello-world",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Hello, world!",
-  "main": "./src/index.js",
+  "main": "./out/index.js",
   "scripts": {
+    "prepare": "babel src/ -d out/",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -16,5 +17,9 @@
     "url": "https://github.com/velocityboy/hello-world/issues"
   },
   "homepage": "https://github.com/velocityboy/hello-world#readme",
-  "bin": "./src/index.js"
+  "bin": "./out/index.js",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-env": "^2.4.1"
+  }
 }
